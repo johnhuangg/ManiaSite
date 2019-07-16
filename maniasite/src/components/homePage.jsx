@@ -4,7 +4,8 @@ import Help from "./helpPage";
 import Leaderboard from "./leaderboardPage";
 import { Hash } from "crypto";
 import Play from "./playPage";
-class HomePage extends Component {
+import Game from "./gamePage";
+class Home extends Component {
   //state = {  }
   render() {
     return (
@@ -20,6 +21,7 @@ class HomePage extends Component {
           <NavLink to="/help">
             <button class="btn-success">Help</button>
           </NavLink>
+
           {/* <ul className="header">
               <li><a href="/">Home</a></li>
               <li><a href="/stuff">Stuff</a></li>
@@ -29,6 +31,7 @@ class HomePage extends Component {
             <Route path="/play" component={Play} />
             <Route path="/leaderboard" component={Leaderboard} />
             <Route path="/help" component={Help} />
+            <Route path="/game" component={Game} />
           </div>
         </div>
       </HashRouter>
@@ -36,4 +39,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default Home;
