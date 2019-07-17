@@ -5,10 +5,8 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import bootstrap from "bootstrap/dist/css/bootstrap.css";
 import HomePage from "./components/homePage";
-import Main from "./components/main";
 ReactDOM.render(
   <div>
-    <Main />
     <HomePage />
   </div>,
   document.getElementById("root")

@@ -6,29 +6,48 @@ class Play extends Component {
   state = {};
   render() {
     return (
-      <HashRouter>
-        <div>
+      <div>
+        <div className="text-center">
           <h1>Play Page</h1>
-          <NavLink to="/home">
-            <button class="btn-success">Back</button>
-          </NavLink>
-          <NavLink to="/game">
-            <button class="btn-success">Easy"</button>
-          </NavLink>
-          <NavLink to="/game">
-            <button class="btn-success">Medium</button>
-          </NavLink>
-          <NavLink to="/game">
-            <button class="btn-success">Hard</button>
-          </NavLink>
-          <div className="content">
-            <Switch>
-              <Route path="/home" component={Home} />
-              <Route path="/game" component={Game} />
-            </Switch>
+        </div>
+
+        <div className="page-break">
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <NavLink to="/game">
+                <button class="btn btn-success">Easy"</button>
+              </NavLink>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <NavLink to="/game">
+                <button class="btn btn-success">Medium</button>
+              </NavLink>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <NavLink to="/game">
+                <button class="btn btn-success">Hard</button>
+              </NavLink>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 text-left">
+              <NavLink to="/home">
+                <button class="btn btn-danger">Back</button>
+              </NavLink>
+            </div>
           </div>
         </div>
-      </HashRouter>
+        <div className="content">
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/game" component={Game} />
+          </Switch>
+        </div>
+      </div>
     );
   }
 }

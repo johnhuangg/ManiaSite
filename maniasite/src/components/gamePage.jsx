@@ -6,10 +6,17 @@ class Game extends Component {
   render() {
     return (
       <div>
-        <h1>THIS IS GAME PAGE</h1>
-        <NavLink to="/home">
-          <button className="btn-danger">{"<-Back"}</button>
-        </NavLink>
+        <div className="text-center">
+          <h1>THIS IS GAME PAGE</h1>
+        </div>
+        <div className="row">
+          <div className="col-md-4 text-center">
+            <NavLink to="/home">
+              <button className="btn btn-danger">{"<-Back"}</button>
+            </NavLink>
+          </div>
+        </div>
+
         <div className="content">
           <Switch>
             <Route path="/home" component={Home} />

@@ -6,7 +6,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+h1 {
+  color: navy;
+}
+/* .page-break {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+} */
+.btn-success {
+  display: block;
+  margin: auto;
+  width: 150px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

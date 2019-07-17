@@ -11,22 +11,32 @@ class Home extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>title page</h1>
-          <NavLink to="/play">
-            <button class="btn-success">Play</button>
-          </NavLink>
-          <NavLink to="/leaderboard">
-            <button class="btn-success">Leaderboards</button>
-          </NavLink>
-          <NavLink to="/help">
-            <button class="btn-success">Help</button>
-          </NavLink>
-
-          {/* <ul className="header">
-              <li><a href="/">Home</a></li>
-              <li><a href="/stuff">Stuff</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul> */}
+          <div className="col-md-12 text-center">
+            <h1>MANIA COPYYYY</h1>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <NavLink to="/play">
+                  <button className="btn btn-success">Play</button>
+                </NavLink>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <NavLink to="/leaderboard">
+                  <button className="btn btn-success">Leaderboards</button>
+                </NavLink>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <NavLink to="/help">
+                  <button className="btn btn-success">Help</button>
+                </NavLink>
+              </div>
+            </div>
+          </div>
           <div className="content">
             <Route path="/play" component={Play} />
             <Route path="/leaderboard" component={Leaderboard} />
