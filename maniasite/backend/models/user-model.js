@@ -9,7 +9,8 @@ const userSchema = new Schema(
       unique: true,
       trim: true,
       minlength: 3
-    }
+    },
+    score: { type: Number, required: true }
   },
   {
     timestamps: true
