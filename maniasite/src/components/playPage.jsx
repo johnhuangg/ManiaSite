@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, NavLink, HashRouter } from "react-router-dom";
+import { Route, Switch, NavLink, Router } from "react-router-dom";
 import Home from "./homePage";
 import Game from "./gamePage";
 class Play extends Component {

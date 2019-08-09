@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, NavLink, HashRouter } from "react-router-dom";
+import { Route, NavLink, BrowserRouter } from "react-router-dom";
 import Help from "./helpPage";
 import Leaderboard from "./leaderboardPage";
 import { Hash } from "crypto";
@@ -9,7 +9,7 @@ class Home extends Component {
   //state = {  }
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <div className="col-md-12 text-center">
             <h1>MANIA COPYYYY</h1>
@@ -44,7 +44,7 @@ class Home extends Component {
             <Route path="/game" component={Game} />
           </div>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }
