@@ -11,7 +11,7 @@ class Play extends Component {
           <h1>Play Page</h1>
         </div>
 
-        <div className="page-break">
+        <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
               <NavLink to="/game">

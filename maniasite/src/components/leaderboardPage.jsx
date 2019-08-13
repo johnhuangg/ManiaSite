@@ -8,14 +8,16 @@ class Leaderboard extends Component {
   render() {
     return (
       <div>
-        <div className="text-center">
-          <h1>Leaderboard Page</h1>
-        </div>
-        <div className="row">
-          <div className="col-md-4 text-center">
-            <NavLink to="/home">
-              <button className="btn btn-danger">{"<-Back"}</button>
-            </NavLink>
+        <div className="container">
+          <div className="text-center">
+            <h1>Leaderboard Page</h1>
+          </div>
+          <div className="row">
+            <div className="col-md-4 text-center">
+              <NavLink to="/home">
+                <button className="btn btn-danger">{"<-Back"}</button>
+              </NavLink>
+            </div>
           </div>
         </div>
         <div className="Content">

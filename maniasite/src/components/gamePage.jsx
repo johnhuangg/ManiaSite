@@ -10,6 +10,12 @@ class Game extends Component {
           <h1>THIS IS GAME PAGE</h1>
         </div>
         <div className="row">
+          <div className="col-md-12 text-center">
+            <button className="btn btn-info">Z</button>
+            <button className="btn btn-info">X</button>
+          </div>
+        </div>
+        <div className="row">
           <div className="col-md-4 text-center">
             <NavLink to="/home">
               <button className="btn btn-danger">{"<-Back"}</button>
