@@ -7,11 +7,11 @@ class Game extends Component {
     x: 0
   };
   componentDidMount() {
-    document.addEventListener("keyPress", this.onKeyPressed);
+    document.addEventListener("keydown", this.onKeyPressed);
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keyPress", this.onKeyPressed);
+    document.removeEventListener("keydown", this.onKeyPressed);
   }
   handleIncrementZ() {
     console.log("added to Z");
@@ -28,7 +28,7 @@ class Game extends Component {
     }
   };
   handleButtonPressX = event => {
-    console.log(event.keyCode);
+    console.log(event.keyCode + "working");
     if (event.keyCode === 88) {
       this.handleIncrementX();
     }
@@ -38,11 +38,15 @@ class Game extends Component {
   }
   render() {
     return (
-      <div>
+      <div
+        onKeyDown={this.handleButtonPressX}
+        tabIndex="0"
+        style={{ outline: 0 }}
+      >
         <div className="text-center">
           <h1>THIS IS GAME PAGE</h1>
         </div>
-        <div className="row" onKeyPress={this.handleButtonPressX} tabIndex="0">
+        <div className="row">
           <div className="col-md-12 text-center">
             <button onClick={this.handleButtonPressX} className="btn btn-info">
               Z
