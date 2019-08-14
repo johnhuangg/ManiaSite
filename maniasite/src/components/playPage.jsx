@@ -22,21 +22,21 @@ class Play extends Component {
           <div className="row">
             <div className="col-md-12 text-center">
               <NavLink to="/game">
-                <button class="btn btn-success">Medium</button>
+                <button className="btn btn-success">Medium</button>
               </NavLink>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12 text-center">
               <NavLink to="/game">
-                <button class="btn btn-success">Hard</button>
+                <button className="btn btn-success">Hard</button>
               </NavLink>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12 text-left">
               <NavLink to="/home">
-                <button class="btn btn-danger">Back</button>
+                <button className="btn btn-danger">Back</button>
               </NavLink>
             </div>
           </div>
