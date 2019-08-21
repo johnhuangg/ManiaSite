@@ -85,7 +85,7 @@ class Game extends Component {
           <div className="col-md-12 text-center">
             <span className="badge badge-primary">
               {" "}
-              {this.formatSeconds()}{" "}
+              {"Time: " + this.formatSeconds()}{" "}
             </span>
           </div>
         </div>
