@@ -38,7 +38,7 @@ class Home extends Component {
             </div>
           </div>
           <div className="content">
-            <Route path="/play" component={Play} />
+            <Route path="/play" component={Game} />
             <Route path="/leaderboard" component={Leaderboard} />
             <Route path="/help" component={Help} />
             <Route path="/game" component={Game} />

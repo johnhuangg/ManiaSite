@@ -47,17 +47,51 @@ class Game extends Component {
     if (this.timer == 0 && this.state.seconds > 0) {
       this.timer = setInterval(this.countDown, 1000);
     }
-    console.log("started");
   }
   countDown() {
-    console.log(this.state.seconds + " seconds" + this.state.started);
     this.setState({
       seconds: this.state.seconds - 1
     });
-    console.log(this.state.seconds + " seconds2" + this.state.started);
     if (this.state.seconds == 0) {
       clearInterval(this.timer);
-      console.log("went here");
+    }
+  }
+
+  afterGameRender() {
+    if (this.state.seconds === 0) {
+      return (
+        <div>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <span className="badge badge-primary">
+                {"BPM: " + this.state.count * 3}
+              </span>
+            </div>
+          </div>
+          <div className="row">
+            <div class="col-md-4 mx-auto">
+              <div class="input-group">
+                <input
+                  id="userinput"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter your username..."
+                  autofocus
+                />
+                <span class="input-group-append">
+                  <button
+                    id="addbtn"
+                    type="button"
+                    class="btn btn-primary mb1 bg-red"
+                  >
+                    Add
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     }
   }
   render() {
@@ -78,7 +112,10 @@ class Game extends Component {
         </div>
         <div className="row">
           <div className="col-md-12 text-center">
-            <span className="badge badge-primary"> {this.formatCount()} </span>
+            <span className="badge badge-primary">
+              {" "}
+              {"Score: " + this.formatCount()}{" "}
+            </span>
           </div>
         </div>
         <div className="row">
@@ -89,6 +126,7 @@ class Game extends Component {
             </span>
           </div>
         </div>
+        <div>{this.afterGameRender()}</div>
         <div className="row">
           <div className="col-md-4 text-center">
             <NavLink to="/home">
