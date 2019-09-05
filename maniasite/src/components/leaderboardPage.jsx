@@ -3,8 +3,20 @@ import { Route, Switch, NavLink } from "react-router-dom";
 import Home from "./homePage";
 import Help from "./helpPage";
 import Game from "./gamePage";
+import axios from "axios";
 class Leaderboard extends Component {
-  state = {};
+  state = {
+    users: []
+  };
+  componentDidMount() {
+    axios.get("http://locahhost:5000/users/").then(response => {
+      if (response.data.length > 0) {
+        this.setState({
+          users: response.data.map
+        });
+      }
+    });
+  }
   render() {
     return (
       <div>
@@ -27,6 +39,12 @@ class Leaderboard extends Component {
         </div>
       </div>
     );
+  }
+  showUsers() {
+    if (this.state.users.data.length > 0) {
+    } else {
+      return;
+    }
   }
 }
 
