@@ -9,13 +9,19 @@ class Leaderboard extends Component {
     users: []
   };
   componentDidMount() {
-    axios.get("http://locahhost:5000/users/").then(response => {
-      if (response.data.length > 0) {
-        this.setState({
-          users: response.data.map
-        });
-      }
-    });
+    console.log("got data");
+    axios
+      .get("http://localhost:5000/users/")
+      .then(response => {
+        if (response.data.length > 0) {
+          this.setState({
+            users: response.data
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
   render() {
     return (
@@ -24,6 +30,10 @@ class Leaderboard extends Component {
           <div className="text-center">
             <h1>Leaderboard Page</h1>
           </div>
+          <div className="row">
+            <div className="col-md-12 mx-auto">{this.showUsers()}</div>
+          </div>
+
           <div className="row">
             <div className="col-md-4 text-center">
               <NavLink to="/home">
@@ -41,9 +51,28 @@ class Leaderboard extends Component {
     );
   }
   showUsers() {
-    if (this.state.users.data.length > 0) {
+    if (this.state.users.length > 0) {
+      let usersCopy = this.state.users;
+      console.log("went here");
+      usersCopy.sort((a, b) => b.score - a.score);
+      usersCopy = usersCopy.slice(0, 3);
+      console.log(usersCopy.length);
+
+      return (
+        <ol className="mx-auto">
+          {usersCopy.map(user => (
+            <li key={user.username}>
+              {user.username}: {user.score} BPM
+            </li>
+          ))}
+        </ol>
+      );
     } else {
-      return;
+      return (
+        <div>
+          <p>No scores yet</p>
+        </div>
+      );
     }
   }
 }

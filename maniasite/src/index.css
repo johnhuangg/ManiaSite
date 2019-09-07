@@ -9,6 +9,9 @@ body {
 h1 {
   color: navy;
 }
+p {
+  color: navy;
+}
 /* .page-break {
   display: flex;
   flex-direction: column;
